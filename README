@@ -1,0 +1,8 @@
+A small collection of utlities that make wworking with Arduinos easier.
+Currently includes:
+
+* FreeMemory - function for displaying how much availale RAM is left
+  From: http://www.arduino.cc/playground/Code/AvailableMemory
+
+* Serialprint - function for printing debugging information (with format strings stored in flash)
+  From: http://www.utopiamechanicus.com/399/low-memory-serial-print/
