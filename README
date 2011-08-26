@@ -1,4 +1,4 @@
-A small collection of utlities that make wworking with Arduinos easier.
+A small collection of utilities that make working with an Arduino easier.
 Currently includes:
 
 * FreeMemory - function for displaying how much availale RAM is left
