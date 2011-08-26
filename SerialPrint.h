@@ -3,6 +3,15 @@
 #ifndef _SERIALPRINT_H_
 #define _SERIALPRINT_H_
 
+#include <avr/pgmspace.h>
+
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+#endif
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif // __cpluscplus

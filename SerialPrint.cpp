@@ -1,14 +1,6 @@
 // Code from http://www.utopiamechanicus.com/399/low-memory-serial-print/
 
-#include <avr/pgmspace.h>
-
-#if defined(ARDUINO) && ARDUINO >= 100
-  #include "Arduino.h"
-#else
-  #include "WProgram.h"
-#endif
-
-extern "C" {
+#include "Serialprint.h"
 
 void StreamPrint_progmem(Print &out, PGM_P format,...)
 {
@@ -27,4 +19,3 @@ void StreamPrint_progmem(Print &out, PGM_P format,...)
   out.print(ptr);
 }
  
-} // extern "C"

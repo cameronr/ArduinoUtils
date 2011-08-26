@@ -1,11 +1,10 @@
 // code from http://www.arduino.cc/playground/Code/AvailableMemory
 
-extern unsigned int __bss_end;
-// extern unsigned int __heap_start;
-extern void *__brkval;
-
-
 #include "MemoryFree.h";
+#include "Serialprint.h"
+
+extern unsigned int __bss_end;
+extern void *__brkval;
 
 
 int freeMemory() {
@@ -17,5 +16,9 @@ int freeMemory() {
     free_memory = ((int)&free_memory) - ((int)__brkval);
 
   return free_memory;
+}
+
+void printFreeMemory() {
+  Serialprint("freeMemory: %d\n", freeMemory());
 }
 
